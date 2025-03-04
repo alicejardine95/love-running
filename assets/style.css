@@ -251,6 +251,14 @@ main {
     color: #3a3a3a;
 }
 
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    line-height: 0;
+}
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
@@ -311,6 +319,14 @@ main {
         align-self: flex-end;
     }
 
+    /*gallery*/
+
+#photos {
+    line-height: 0;
+}
+
+    /*form*/
+
     #signup {
         background-position: center;
         position: relative;
@@ -331,13 +347,22 @@ main {
         background-color: #fafafa;
         color: #454b1b;
     }
-
 }
-
+/*media query: large or landscape phones (576px and up)*/
+@media screen and (min-width: 575px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+
+    #photos {
+        column-count: 4;
     }
 }
 
@@ -366,5 +391,10 @@ main {
 
     #benefits-physical > div {
         align-self: flex-end;
+    }
+
+    /*gallery*/
+    #photos {
+        column-count: 3;
     }
 }
